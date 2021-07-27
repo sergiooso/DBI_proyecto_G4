@@ -1,6 +1,6 @@
 # DBI_proyecto_G4
 
-##Integrantes
+## Integrantes
   - Sergio Josué Valladares Ávila		20111010039
   - Erick Fabricio Montoya Laínez		20162300051
   - Josué Jonathan Zelaya Hernández		20111002400
