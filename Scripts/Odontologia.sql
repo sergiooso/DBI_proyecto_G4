@@ -86,11 +86,11 @@ CREATE TABLE Expediente(
     Descripcion TEXT NOT NULL,
     Fecha_Inicio DATE NOT NULL,
     Id_Paciente INT NOT NULL,
-    Odontologo INT NOT NULL,
+    Id_Odontologo INT NOT NULL,
 
     CONSTRAINT PK_Id_Expediente PRIMARY KEY (Id_Expediente),
     CONSTRAINT FK_Id_Paciente_EX FOREIGN KEY (Id_Paciente) REFERENCES Paciente(Id_Paciente),
-    CONSTRAINT FK_Id_Odontologo_EX FOREIGN KEY (Id_Odontologo) REFERENCES Id_Odontologo(Id_Odontologo)
+    CONSTRAINT FK_Id_Odontologo_EX FOREIGN KEY (Id_Odontologo) REFERENCES Odontologo(Id_Odontologo)
 );
 
 CREATE TABLE Receta_Medica(
