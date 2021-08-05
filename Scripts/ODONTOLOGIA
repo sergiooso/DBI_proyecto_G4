@@ -1,0 +1,135 @@
+CREATE DATABASE ODONTOLOGIA;
+USE ODONTOLOGIA;
+
+CREATE TABLE TBL_PACIENTE(
+    Idpaciente INT, 
+    PriNombre TEXT NOT NULL,
+    SegNombre TEXT NOT NULL,
+    PriApellido TEXT NOT NULL,
+    SegApellido TEXT NOT NULL,
+    Telefono VARCHAR(9) NOT NULL,
+    Correo TEXT NOT NULL,
+    Direccion TEXT NOT NULL,
+    Fecha_Nac DATE NOT NULL,
+    Contrasenia VARCHAR(20) NOT NULL,
+
+    CONSTRAINT PK_Id_Paciente PRIMARY KEY (IdPaciente)
+);
+
+CREATE TABLE TBL_SUCURSAL(
+    IdSucursal INT,
+    Direccion VARCHAR(50) NOT NULL,
+    Avenida VARCHAR(30) NOT NULL,
+    Calle VARCHAR(30) NOT NULL,
+    Ciudad VARCHAR(30) NOT NULL,
+    Telefono VARCHAR(30) NOT NULL,
+
+    CONSTRAINT PK_IdSucursal PRIMARY KEY (IdSucursal)
+);
+
+CREATE TABLE TBL_EMPLEADO(
+    DniEmpleado INT,
+	IdSucursal INT NOT NULL,
+    PriNombre TEXT NOT NULL,
+    SegNombre TEXT NOT NULL,
+    PriApellido TEXT NOT NULL,
+    SegApellido TEXT NOT NULL,
+    Telefono VARCHAR(9) NOT NULL,
+    Cargo ENUM ('Recepcionista','Contador','Gerente Administrativo') NOT NULL, 
+    /*Pueden haber mas tipos de cargo, los que estan ahi solo son de ejemplo*/
+    Sexo ENUM ('Femenino','Masculino') NOT NULL,
+    Contrasenia VARCHAR(20) NOT NULL,
+
+    CONSTRAINT PK_DniEmpleado PRIMARY KEY (DniEmpleado),
+    CONSTRAINT FK_IdSucursal_E FOREIGN KEY (IdSucursal) REFERENCES TBL_SUCURSAL(IdSucursal)
+);
+select *from TBL_EMPLEADO;
+
+CREATE TABLE TBL_CONSULTORIO(
+    NumConsultorio INT NOT NULL,
+    IdSucursal INT NOT NULL,
+    NombreConsultorio VARCHAR (50) NOT NULL, 
+    Ubicacion VARCHAR(50) NOT NULL,
+
+	PRIMARY KEY (NumConsultorio,IdSucursal),
+    CONSTRAINT FK_IdSucursal_C FOREIGN KEY (IdSucursal) REFERENCES TBL_SUCURSAL(IdSucursal)
+);
+
+CREATE TABLE TBL_ODONTOLOGO(
+    IdOdontologo INT,
+    IdSucursal INT NOT NULL,
+    Especialidad VARCHAR(20) NOT NULL,
+    PriNombre TEXT NOT NULL,
+    SegNombre TEXT NOT NULL,
+    PriApellido TEXT NOT NULL,
+    SegApellido TEXT NOT NULL,
+    Contrasenia VARCHAR(20) NOT NULL,
+
+    CONSTRAINT PK_IdOdontologo PRIMARY KEY (IdOdontologo),
+    CONSTRAINT FK_IdSucursal_O FOREIGN KEY (IdSucursal) REFERENCES TBL_SUCURSAL(IdSucursal)
+);
+
+
+CREATE TABLE TBL_CONSULTA(
+    NumConsulta INT,
+    Fecha DATE NOT NULL,
+    IdPaciente INT NOT NULL,
+    IdOdontologo INT NOT NULL,
+
+    CONSTRAINT PK_NumConsulta PRIMARY KEY (NumConsulta),
+    CONSTRAINT FK_IdPaciente_CON FOREIGN KEY (IdPaciente) REFERENCES TBL_PACIENTE(IdPaciente),
+    CONSTRAINT FK_IdOdontologo_CON FOREIGN KEY (IdOdontologo) REFERENCES TBL_ODONTOLOGO(IdOdontologo)
+
+);
+
+CREATE TABLE TBL_EXPEDIENTE(
+    IdExpediente INT,
+    Descripcion TEXT NOT NULL,
+    Fecha_Inicio DATE NOT NULL,
+    IdPaciente INT NOT NULL,
+    IdOdontologo INT NOT NULL,
+
+    CONSTRAINT PK_IdExpediente PRIMARY KEY (IdExpediente),
+    CONSTRAINT FK_IdPaciente_EX FOREIGN KEY (IdPaciente) REFERENCES TBL_PACIENTE(IdPaciente),
+    CONSTRAINT FK_IdOdontologo_EX FOREIGN KEY (IdOdontologo) REFERENCES TBL_ODONTOLOGO(IdOdontologo)
+);
+
+CREATE TABLE TBL_RECETA_MEDICA(
+    IdReceta INT,
+    Descripcion TEXT NOT NULL,
+    Fecha_Actual DATE NOT NULL,
+    IdPaciente INT NOT NULL,
+    IdOdontologo INT NOT NULL,
+
+    CONSTRAINT PK_IdReceta PRIMARY KEY (IdReceta),
+    CONSTRAINT FK_IdPaciente_RM FOREIGN KEY (IdPaciente) REFERENCES TBL_PACIENTE(IdPaciente),
+    CONSTRAINT FK_IdOdontologo_RM FOREIGN KEY (IdOdontologo) REFERENCES TBL_ODONTOLOGO(IdOdontologo)
+);
+
+CREATE TABLE TBL_TRATAMIENTO(
+    IdTratamiento INT,
+    Nombre VARCHAR(50) NOT NULL,
+    Precio FLOAT NOT NULL,
+    Fecha_Inicio DATE NOT NULL,
+    IdOdontologo INT NOT NULL,
+
+    CONSTRAINT PK_IdTratamiento PRIMARY KEY (IdTratamiento),
+    CONSTRAINT FK_IdOdontologo_TR FOREIGN KEY (IdOdontologo) REFERENCES TBL_ODONTOLOGO(IdOdontologo)
+);
+
+CREATE TABLE Factura(
+    NumFactura INT,
+    Descripcion VARCHAR(50) NOT NULL,
+    Total_Pagar FLOAT NOT NULL,
+    Direccion TEXT NOT NULL,
+    Fecha_Actual DATE NOT NULL,
+    Subtotal FLOAT NOT NULL,
+    IdPaciente INT NOT NULL,
+    IdTratamiento INT NOT NULL,
+
+    CONSTRAINT Num_Factura PRIMARY KEY (NumFactura),
+    CONSTRAINT FK_IdPaciente_FC FOREIGN KEY (IdPaciente) REFERENCES TBL_PACIENTE(IdPaciente),
+    CONSTRAINT FK_IdTratamiento_FC FOREIGN KEY (IdTratamiento) REFERENCES TBL_TRATAMIENTO(IdTratamiento)
+);
+
+
