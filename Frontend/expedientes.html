@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Listado de expedientes</title>
+</head>
+
+<body class="mt-4">
+    <div class="container">
+        <h1 class="text-center text-primary mb-3">Listado de expedientes</h1>
+
+        <section id="tabla" class="m-4 p-4" >
+           
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Fecha inicio</th>
+                    </tr>
+                </thead>
+                <tbody id="listado" >
+                    
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script>
+
+        window.onload = () =>{
+
+            [1,2,3,4,5,6].forEach(user => {
+                document.getElementById('listado').innerHTML += 
+                    `<tr>
+                        <th scope="row">1</th>
+                        <td>Mack</td>
+                        <td>Rosales</td>
+                        <td>Evaluacion</td>
+                        <td>02-06-2021</td>
+                    </tr>`
+            });
+
+
+        }
+
+    </script>
+</body>
