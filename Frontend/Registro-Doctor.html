@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Doctor</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body background="img/background3.jpg"  style="background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center center;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="padding: 20px;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CEESHO</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown" style="justify-content: flex-end;"> 
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sucursales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Horarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Conozca al equipo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="roles.html">Usuarios</a>
+              </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container" style="padding-top: 2%; margin-top: 7%;background-color: rgba(237, 236, 252, 0.815);" bis_skin_checked="1">
+        <main>      
+          <div class="row g-5" bis_skin_checked="1">
+            <div class="col-md-5 col-lg-4 order-md-last" bis_skin_checked="1">
+              <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-primary">Fotografia</span>
+              </h4>
+              <div class="col" bis_skin_checked="1">
+                <div class="card shadow-sm" bis_skin_checked="1">
+                  <img class="bd-placeholder-img card-img-top" width="100%" height="325" src="img/cirugia.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+    
+                </div>
+              </div>
+
+              
+            </div>
+            <div class="col-md-7 col-lg-8" bis_skin_checked="1">
+              <h4 class="mb-3">Registro Doctor</h4>
+              <FORM class="needs-validation" novalidate="">
+
+                <div class="col-12" bis_skin_checked="1">
+                  <label for="idOdontologo" class="form-label">Licencia Medica</label>
+                  <div class="input-group has-validation" bis_skin_checked="1">
+                    <input type="number" class="form-control" id="idOdontologo" placeholder="" required="">
+                  <div class="invalid-feedback" bis_skin_checked="1">
+                      Campo Obligatorio.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row g-3" bis_skin_checked="1">
+                  <div class="col-sm-6" bis_skin_checked="1">
+                    <label for="priNombreDoc" class="form-label">Primer Nombre</label>
+                    <input type="text" class="form-control" id="priNombreDoc" placeholder="" value="" required="">
+                    <div class="invalid-feedback" bis_skin_checked="1">
+                      Campo Obligatorio.
+                    </div>
+                  </div>
+      
+                  <div class="col-sm-6" bis_skin_checked="1">
+                    <label for="segNombreDoc" class="form-label">Segundo Nombre</label>
+                    <input type="text" class="form-control" id="segNombreDoc" placeholder="" value="">
+                  </div>
+
+                  <div class="col-sm-6" bis_skin_checked="1">
+                    <label for="priApellidoDoc" class="form-label">Primer Apellido</label>
+                    <input type="text" class="form-control" id="priApellidoDoc" placeholder="" value="" required="">
+                    <div class="invalid-feedback" bis_skin_checked="1">
+                      Campo Obligatorio.
+                    </div>
+                  </div>
+      
+                  <div class="col-sm-6" bis_skin_checked="1">
+                    <label for="segApellidoDoc" class="form-label">Segundo Apellido</label>
+                    <input type="text" class="form-control" id="segApellidoDoc" placeholder="" value="">
+                  </div>
+
+                  <div class="col-12" bis_skin_checked="1">
+                    <label for="idEmpleado" class="form-label">Numero de Identidad</label>
+                    <div class="input-group has-validation" bis_skin_checked="1">
+                      <input type="number" class="form-control" id="idEmpleado" placeholder="0000000000000" required="">
+                    <div class="invalid-feedback" bis_skin_checked="1">
+                        Campo Obligatorio.
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-12" bis_skin_checked="1">
+                    <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback" bis_skin_checked="1">
+                      Por favor ingrese un email valido.
+                    </div>
+                  </div>
+      
+                  <div class="col-12" bis_skin_checked="1">
+                    <label for="direccion" class="form-label">Direccion</label>
+                    <input type="text" class="form-control" id="direccion" placeholder="" required="">
+                    <div class="invalid-feedback" bis_skin_checked="1">
+                      Por favor ingrese su direccion.
+                    </div>
+                  </div>
+      
+                  <div class="col-md-5" bis_skin_checked="1">
+                    <label for="especialidad" class="form-label">Especialidad</label>
+                    <select class="form-select" id="especialidad" required="">
+                      <option value="">Seleccionar</option>
+                      <option>Tecnico Dental</option>
+                      <option>Asistente Dental</option>
+                    </select>
+                    <div class="invalid-feedback" bis_skin_checked="1">
+                      Por favor ingrese una Especialidad.
+                    </div>
+                  </div>
+      
+                  <div class="col-md-4" bis_skin_checked="1">
+                    <label for="sucursal" class="form-label">Sucursal</label>
+                    <select class="form-select" id="sucursal" required="">
+                      <option value="">Seleccionar</option>
+                      <option>1</option>
+                    </select>
+                    <div class="invalid-feedback" bis_skin_checked="1">
+                      Por favor ingrese una Sucursal.
+                    </div>
+                  </div>
+
+                  <div class="col-md-3" bis_skin_checked="1">
+                    <label for="telefonoPac" class="form-label">Telefono</label>
+                    <input type="text" class="form-control" id="telefonoPac" placeholder="" required="">
+                    <div class="invalid-feedback" bis_skin_checked="1">
+                      Campo Obligatorio.
+                    </div>
+                  </div>
+                </div>
+      
+                <hr>
+      
+                <button style="margin-bottom: 5%;" class="w-100 btn btn-primary btn-lg" type="submit">Registrar</button>
+              </FORM>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer class="text-center" style="padding: 2%;margin-top: 2%;background-color: rgb(235, 233, 240);">
+        <p>©2021 CEESHO</p>
+      </footer>
+</body>
+</html>
