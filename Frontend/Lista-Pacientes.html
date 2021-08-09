@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Doctor</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body background="img/background3.jpg"  style="background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center center;">
+  
+  <svg xmlns="" style="display: none;">
+    <symbol id="doctor" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+    </symbol>
+    <symbol id="Tratamiento" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
+        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+    </symbol>
+    <symbol id="Tratamientos" viewBox="0 0 16 16">
+        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+    </symbol>
+    <symbol id="paciente" viewBox="0 0 16 16">
+        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+    </symbol>
+  </svg>
+  
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="padding: 20px;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CEESHO</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown" style="justify-content: flex-end;"> 
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sucursales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Horarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Conozca al equipo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="roles.html">Usuarios</a>
+              </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="d-flex flex-column flex-shrink-0 p-3 bg-light fixed-top" style="margin-top: 5%; width: 280px; height: 90%;">
+        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+          <img src="img/configuraciones.png" class="bi me-2" width="40" height="32"></img>
+          <span class="fs-4">Administracion</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+          </li>
+          <li>
+            <a href="Registro-Paciente.html" class="nav-link link-dark">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#doctor"/></svg>
+              Registrar Doctor
+            </a>
+          </li>
+          <li>
+            <a href="Registro-Consulta.html" class="nav-link active ">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#paciente"/></svg>
+              Pacientes
+            </a>
+          </li>
+          <li>
+            <a href="Registro-Consulta.html" class="nav-link link-dark">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#Tratamiento"/></svg>
+              Registrar Tratamientos
+            </a>
+          </li>
+          <li>
+            <a href="Registro-Consulta.html" class="nav-link link-dark">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#Tratamientos"/></svg>
+              Tratamientos
+            </a>
+          </li>
+        </ul>
+        <hr>
+          <a href="#" class="d-flex align-items-center link-dark text-decoration-none" id="dropdownUser2" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>Admin</strong>
+          </a>
+        </div>
+      </div>
+
+    <div class="container" style="padding-top: 2%; margin-top: 7%;background-color: rgba(237, 236, 252, 0.815);" bis_skin_checked="1">
+        <main>      
+          <div class="row g-5" bis_skin_checked="1">
+            <div class="col-md-3 col-lg-2" bis_skin_checked="1">
+            </div>
+            <div class="col-md-7 col-lg-8" bis_skin_checked="1">
+              <h2>Consultas Vista General</h2>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Direccion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <form action="">
+                    <th scope="row">1</th>
+                    <td>0601199704262</td>
+                    <td>Otto</td>
+                    <td>Contreras</td>
+                    <td>84521484</td>
+                    <td>Bo. El Centro</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">2</th>
+                    <td>0000000000000</td>
+                    <td>Thornton</td>
+                    <td>Rodriguez</td>
+                    <td>95214875</td>
+                    <td>Kennedy Z4</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">3</th>
+                    <td>0000000000000</td>
+                    <td>Oscar</td>
+                    <td>Madrid</td>
+                    <td>95321587</td>
+                    <td>Centro America</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">4</th>
+                    <td>0000000000000</td>
+                    <td>Ian</td>
+                    <td>Jims</td>
+                    <td>92543287</td>
+                    <td>Loarque</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">5</th>
+                    <td>0000000000000</td>
+                    <td>Danelia</td>
+                    <td>Maradiaga</td>
+                    <td>32658412</td>
+                    <td>Pedregal</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">6</th>
+                    <td>0000000000000</td>
+                    <td>Alfonso</td>
+                    <td>Diaz</td>
+                    <td>31255465</td>
+                    <td>Villa Olimpica</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">7</th>
+                    <td>0000000000000</td>
+                    <td>Eva</td>
+                    <td>Montes</td>
+                    <td>87216532</td>
+                    <td>San Miguel</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">8</th>
+                    <td>0000000000000</td>
+                    <td>Stefani</td>
+                    <td>Ginebra</td>
+                    <td>88656545</td>
+                    <td>La Travesia</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">9</th>
+                    <td>0000000000000</td>
+                    <td>Gina</td>
+                    <td>Fiallos</td>
+                    <td>88326512</td>
+                    <td>Cerro Grande</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">10</th>
+                    <td>0000000000000</td>
+                    <td>David</td>
+                    <td>Suniga</td>
+                    <td>33545252</td>
+                    <td>Res. Bella Oriente</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">11</th>
+                    <td>0000000000000</td>
+                    <td>Albert</td>
+                    <td>Sierra</td>
+                    <td>33658412</td>
+                    <td>Torocagua</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">12</th>
+                    <td>0000000000000</td>
+                    <td>Marvin</td>
+                    <td>Guzman</td>
+                    <td>31528487</td>
+                    <td>Carrizal</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">13</th>
+                    <td>0000000000000</td>
+                    <td>Jacob</td>
+                    <td>Vals</td>
+                    <td>98545263</td>
+                    <td>La Campana</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">14</th>
+                    <td>0000000000000</td>
+                    <td>Harolf</td>
+                    <td>Hendalf</td>
+                    <td>95254521</td>
+                    <td>Lomas del Mayab</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">15</th>
+                    <td>0000000000000</td>
+                    <td>Danessi</td>
+                    <td>Cuello</td>
+                    <td>88652323</td>
+                    <td>San Angel</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">16</th>
+                    <td>0000000000000</td>
+                    <td>Lila</td>
+                    <td>Mont</td>
+                    <td>95458575</td>
+                    <td>Las Colinas</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">17</th>
+                    <td>0000000000000</td>
+                    <td>Sandra</td>
+                    <td>Martinez</td>
+                    <td>99632541</td>
+                    <td>Las Casitas</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">18</th>
+                    <td>0000000000000</td>
+                    <td>Carlos</td>
+                    <td>Constan</td>
+                    <td>99654822</td>
+                    <td>El Portal</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">19</th>
+                    <td>0000000000000</td>
+                    <td>Kim</td>
+                    <td>Valle</td>
+                    <td>87653281</td>
+                    <td>Miraflores</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <form action="">
+                    <th scope="row">20</th>
+                    <td>0000000000000</td>
+                    <td>Dani</td>
+                    <td>Valladares</td>
+                    <td>88326366</td>
+                    <td>Los Pinos</td>
+                    <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                    </form>
+                  </tr>
+                </tbody>
+              </table>
+              <button class="btn btn-outline-secondary" type="button">Pagina Anterior</button> 
+              <button class="btn btn-outline-secondary" type="button">Pagina Siguiente</button>
+            </div>
+          </div>
+        </main>
+    </div>
+      <footer class="text-center" style="padding: 2%;margin-top: 2%;background-color: rgb(235, 233, 240);">
+        <p>©2021 CEESHO</p>
+      </footer>
+</body>
+</html>
