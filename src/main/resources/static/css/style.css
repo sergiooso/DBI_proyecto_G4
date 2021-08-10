@@ -1,0 +1,64 @@
+body {
+	background:#f1f1f1;
+}
+
+h1 {
+	color:rgba(0, 0, 0, .5) ;
+}
+
+hr {
+	color:rgba(0, 0, 0, .5) ;
+}
+
+
+p {
+	font-size: 28px;
+	margin: 0px 37%;
+	width: 80%;
+}
+
+
+
+div{
+width: 15%;
+height: 0px;
+color:#ffffff ;
+padding: 50px;
+margin: 0px 40%;
+}
+
+div img {
+	margin: 0px 0%;
+	width: 105%;
+	height: 600px;
+
+}
+
+img {
+	margin: 0px 30%;
+}
+
+
+
+form {
+	margin: 25px 46%;
+}
+
+
+
+select {
+	font-size: 20px;
+	margin: 55px 14%;
+}
+
+input {
+	font-size: 20px;
+	margin: 14px 12%;
+	width: 80%;
+	padding: 1px;
+}
+
+footer {
+	color:#ffffff ;
+	margin:420px 48%;
+}
